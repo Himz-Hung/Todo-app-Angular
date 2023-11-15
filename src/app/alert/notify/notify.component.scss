@@ -1,0 +1,74 @@
+.alert {
+  border-radius: 5px;
+  position: absolute;
+  width: 25%;
+  height: max-content;
+  background-color: #EA6E62;
+  padding-bottom: 10px;
+  animation: flash 2s infinite;
+  bottom: 0;
+  left: 0;
+  & img {
+    border-radius: 50%;
+    width: 20%;
+    float: left;
+  }
+  & .content {
+    width: 80%;
+    float: left;
+    & p {
+      color: whitesmoke;
+      float: left;
+      margin: 10px 10px 0;
+    }
+    & #alertContent {
+      font-weight: bolder;
+      width: 100%;
+    }
+    & #todoContent {
+      height: 80%;
+      width: 80%;
+      word-wrap: break-word;
+      overflow-y: scroll;
+    }
+  }
+  & #close {
+    color: whitesmoke;
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+    font-size: 2em;
+    float: right;
+  }
+}
+::-webkit-scrollbar {
+  left: -100px;
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@keyframes flash {
+  0% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
+
+

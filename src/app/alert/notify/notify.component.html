@@ -1,0 +1,7 @@
+<div class="alert" role="alert" *ngIf="flag">
+  <div class="content">
+  <p id="alertContent">1 Hour until : </p>
+  <p id="todoContent">{{ todoContent }}</p>
+</div>
+  <div role="button" id="close" (click)="toggle()">&times;</div>
+</div>

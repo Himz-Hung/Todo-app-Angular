@@ -1,0 +1,47 @@
+.todoBox {
+  position: relative;
+  max-width: 1500px;
+  width: 90vw;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  & .loading {
+    float: right;
+    & i {
+      scale: 2.5;
+      animation: rolling 2s linear infinite;
+    }
+    @keyframes rolling {
+      0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+    }
+  }
+  & .todo {
+    flex-wrap: wrap;
+    width: 75%;
+    height: 100%;
+    & #addTodo{
+      cursor: pointer;
+      color: white;
+      float: right;
+      margin: 2% 15% 0 0;
+      padding: 8px;
+      border-radius: 10px;
+      background-color: #0083FD;
+      transition: .5s ease;
+      &:hover{
+        box-shadow: 0px 0px 5px whitesmoke;
+      }
+    }
+    & #footer{
+      color: white;
+      font-size: larger;
+    }
+  }
+}

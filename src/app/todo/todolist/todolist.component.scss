@@ -1,0 +1,29 @@
+.todoBox {
+display: flex;
+flex-direction: column;
+overflow: scroll;
+width: 70%;
+height: 70%;
+margin: auto;
+overflow-x: hidden;
+margin-top: 3%;
+}
+::-webkit-scrollbar {
+  border-radius: 10px;
+  left: -100px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

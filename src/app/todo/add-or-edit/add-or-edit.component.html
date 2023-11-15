@@ -1,0 +1,50 @@
+<div class="backgroundBlur">
+<div class="dialog">
+  <h2>Add Todo Form</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
+    <label for="contentInput">What need to do ...</label>
+    <textarea
+      name="content"
+      id="contentInput"
+      cols="26"
+      rows="1"
+      formControlName="content"
+    ></textarea>
+    <div
+      *ngIf="
+        reactiveForm.get('content')?.invalid &&
+        reactiveForm.get('content')?.touched
+      "
+      class="alert"
+      role="alert"
+      id="alertClone"
+    >
+      Content cannot be empty!
+    </div>
+    <div class="date">
+      <label for="dateInput">When need to do ...</label>
+      <input
+        id="dateInput"
+        type="datetime-local"
+        min="2023-01-01T00:00"
+        max="2024-12-31T00:00"
+        formControlName="date"
+      />
+    </div>
+    <div
+      *ngIf="
+        reactiveForm.get('date')?.invalid && reactiveForm.get('date')?.touched
+      "
+      class="alert"
+      role="alert"
+      id="alertClone"
+    >
+      Date cannot be empty!
+    </div>
+    <div class="select">
+      <button>Submit</button>
+    </div>
+  </form>
+  <button id="exit" (click)="cancelDialog()">Cancel</button>
+</div>
+</div>

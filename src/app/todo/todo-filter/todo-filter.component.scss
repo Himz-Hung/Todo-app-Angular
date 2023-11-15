@@ -1,0 +1,23 @@
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  & .filterBtn {
+    color: black;
+    padding: 5px;
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 0.25rem;
+    transition: all ease-in-out;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+      color: whitesmoke;
+      transition: 1s ease;
+      background-color: #0083FD;
+      box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+  }
+}

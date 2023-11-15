@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="completed" *ngIf="todo.checkComplete">
+    <div class="circle">
+      <i class="fa fa-check" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="content">
+    <p>{{ todo.content }}</p>
+  </div>
+  <div class="footer">
+    <p id="dateTime" [innerHTML]="todo.date | dateTimeConverter"></p>
+  <div class="selection">
+    <div class="selector">
+      <button (click)="changeTodoStatus()" id="status">
+        <i
+          class="far"
+          [ngClass]="{
+            'fa-circle-check': !todo.checkComplete,
+            'fa-circle-left': todo.checkComplete
+          }"
+        ></i>
+      </button>
+    </div>
+    <div class="selector">
+      <button
+        (click)="editTodo()"
+        *ngIf="todo.checkComplete == false"
+        id="edit"
+        [ngStyle]="{ 'background-color': 'rgba(210, 66, 66, 0.573)' }"
+      >
+        <i class="far fa-pen-to-square"></i>
+      </button>
+    </div>
+    <div class="selector">
+      <button (click)="removeTodo()">
+        <i class="far fa-trash-can" id="remove"></i>
+      </button>
+    </div>
+  </div>
+</div>
+</div>

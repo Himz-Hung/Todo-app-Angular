@@ -1,0 +1,95 @@
+.backgroundBlur{
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  left: 0;
+  top: 0;
+& .dialog {
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  height: auto;
+  border: solid rgb(82, 81, 81) 1px;
+  box-shadow: 2px 2px 10px #e4e7ed;
+  border-radius: 10px;
+  padding-bottom: 114px;
+  margin: auto;
+  margin-top: 10%;
+  & h2 {
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+  }
+  & label {
+    margin-top: 5%;
+    font-size: larger;
+    display: block;
+    text-align: center;
+  }
+  & button {
+    background-color: rgba(197, 197, 197, 0.316);
+    border: none;
+    color: black;
+    cursor: pointer;
+    float: right;
+    margin: {
+      right: 24.5%;
+      top: 5%;
+    }
+    padding: 6px 12px;
+    border-radius: 0.25rem;
+    transition: 500ms ease;
+    &:first-child {
+      &:hover {
+        background-color: rgba(2, 195, 2, 0.522);
+      }
+    }
+    &:hover {
+      background-color: rgba(255, 0, 0, 0.644);
+    }
+  }
+  & textarea {
+    color: black;
+    font-size: 1.2em;
+    padding: 0 5%;
+    border-radius: 10px;
+    background-color: rgb(201, 245, 245);
+    margin-top: 2%;
+    height: 100px;
+    margin-left: 10%;
+    width: 70%;
+    max-width: 70%;
+    max-height: 100px;
+  }
+  & .date {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & input {
+      border: 0px;
+      margin: auto;
+      border-radius: 10px;
+      background-color: rgb(201, 245, 245);
+      padding: 0 5%;
+      margin-top: 2%;
+      width: 100%;
+      max-width: 190px;
+      height: 40px;
+    }
+  }
+  & .alert {
+    color: whitesmoke;
+    z-index: 1;
+    position: relative;
+    font-size: 1rem;
+    padding: 15px;
+    margin: auto;
+    border-radius: 5px;
+    width: 75%;
+    margin-top: 10px;
+    background-color: #f56c6c;
+  }
+}
+}

@@ -1,0 +1,128 @@
+.container {
+  color: black;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  margin-bottom: 1%;
+  & .completed{
+    position: absolute;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.659);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .circle{
+      position: relative;
+      width: 8%;
+      height: 51%;
+      border: solid 2px;
+      display: flex;
+      border-radius: 500px;
+      justify-content: center;
+      align-items: center;
+      animation: 1s ease zoom;
+      & i{
+        scale: 180%;
+        color: black;
+      }
+    }
+  }
+  & .content {
+    border-bottom: solid 1px black;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px 5px;
+    padding-bottom: 0;
+    & p {
+      width: 90%;
+      word-wrap: break-word;
+      font-size: 1.2em;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+  }
+  & .footer {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    & #dateTime {
+      font-size: .85em;
+      color: rgba(0, 0, 0, 0.723);
+      margin: 0;
+      float: left;
+      width: 50%;
+      height: max-content;
+      padding: 5px;
+    }
+    & .selection {
+      float: right;
+      width: 35%;
+      & .selector {
+        margin-left: 5%;
+        float: right;
+        & button {
+          position: relative;
+          z-index: 1;
+          border: none;
+          width: 37px;
+          height: 37px;
+          border-radius: 50%;
+          transition: 1s ease;
+          cursor: pointer;
+          background-color: #67c23a;
+          float: left;
+          margin: auto;
+          margin-top: 5px;
+          &#status {
+            background-color: #67c23ad6;
+          }
+          & i {
+            margin-left: 1%;
+            scale: 130%;
+            color: rgb(234, 221, 221);
+          }
+          & #edit{
+            position: absolute;
+          }
+          &:nth-child(0) {
+            background-color: #67c23ad6;
+          }
+          &:last-child {
+            background-color: rgba(255, 68, 0, 0.752);
+          }
+        }
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #902222;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@keyframes zoom {
+  0%{
+      scale: 0;
+  }
+  100%{
+      scale: 100%;
+  }
+}

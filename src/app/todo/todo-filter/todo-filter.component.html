@@ -1,0 +1,11 @@
+<div class="filter">
+  <button
+    class="filterBtn"
+    type="button"
+    *ngFor="let btn of FilterTodo"
+    [ngClass]="{ active: btn.activeCheck }"
+    (click)="filterSelect(btn.type)"
+  >
+    {{ btn.label }}
+  </button>
+</div>
